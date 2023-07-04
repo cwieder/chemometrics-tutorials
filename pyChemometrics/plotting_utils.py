@@ -200,7 +200,7 @@ def plotLoadings(pcaLoadings, ppm, spectra, title='', figures=None, savePath=Non
     maxval = np.max([np.abs(np.max(cVect)), np.abs(np.min(cVect))])
     maxcol = maxval#npy.max(cVect) # grab the maximum
     mincol = -maxval#npy.min(cVect) # Grab the minimum
-    new_cmap = _shiftedColorMap(orig_cmap, start=0, midpoint=1 - maxcol/(maxcol + np.abs(mincol)), stop=1, name='new')
+    new_cmap = _shiftedColorMap(orig_cmap, start=0, midpoint=1 - maxcol/(maxcol + np.abs(mincol)), stop=1, name='loadings_cmap')
 
     fig, ax = plt.subplots(figsize=figureSize, dpi=dpi)
 
